@@ -1,0 +1,47 @@
+
+.Profile{
+  grid-area:Profile;
+  background-color:rgb(161, 161, 161);
+}
+.aboutPhoto img{
+  max-width: 250px;
+  margin: 20px 80px 20px 20px;
+}
+.aboutMe{
+  display: flex;
+  flex-direction: row;
+}
+.aboutText{
+  margin:20px 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.aboutText .title{
+  font-size: 30px;
+}
+.text li{
+  list-style-type:none;
+}
+.posts{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.posts .title{
+  font-size: 30px;
+  margin:30px 30px 30px 20px;
+}
+.posts textarea{
+  margin:30px 30px 30px 20px;
+  background-color: rgb(134, 174, 219);
+  width: 700px;
+  height: 80px;
+  resize: none;
+}
+.posts button{
+  
+}
+.myPosts{
+  margin:30px 30px 30px 20px;
+}

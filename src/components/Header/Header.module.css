@@ -1,0 +1,7 @@
+.Header{
+    grid-area: Header;
+    background-color: rgb(85, 141, 83);
+  }
+  .Header img{
+    height: 60px;
+  }
