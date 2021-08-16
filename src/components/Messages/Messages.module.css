@@ -1,0 +1,31 @@
+.wrapper{
+    display: flex;
+    justify-content: start;
+}
+.wrapper_users{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px dashed rgb(0, 0, 0);
+    width: 292.44px;
+    background-color: #363535;
+}
+.wrapper_users a{
+    border-radius: 7px;
+    padding: 15px 30px 15px 40px;
+    transition-duration: 0.2s;
+    
+}
+.wrapper_users a:hover{
+    background-color:#1c1c21;;
+}
+.title{
+    cursor:default ;
+    align-self: center;
+    margin-top: 5px;
+
+}
+
+.wrapper_dialog{
+    width: 540px;
+    background-color:#363535;
+}

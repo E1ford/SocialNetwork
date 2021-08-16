@@ -1,4 +1,23 @@
 .Navbar{
-  grid-area:Nav-bar;
-  background-color: rgb(84, 83, 143);
+  background-color: #1c1c21;
+  padding: 20px 20px 20px 20px;
+}
+a{
+  text-decoration:none;
+}
+a.active {
+  color: red;
+}
+.Navbar *{
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  padding:10px;
+  list-style: none;
+  color: #868484;
+  transition-duration: 0.2s;
+}
+.Navbar *:hover{
+  background-color: #363535;
 }

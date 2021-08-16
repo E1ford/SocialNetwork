@@ -1,0 +1,22 @@
+.post{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top:30px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.post img{
+  width: 50px;
+  border-radius: 30px;
+}
+.text{
+  color:#fff;
+  width: 500px;
+}
+.photo{
+  padding-left: 50px;
+}
+.likes{
+  padding-right: 50px;
+}

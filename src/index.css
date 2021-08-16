@@ -15,11 +15,24 @@ code {
 
 
 .Wrapper{
-  max-width: 100%;
-  display:grid;
-  grid-template: 60px 1fr / 2fr 10fr;
-  grid-template-areas: 
-  "Header Header"
-  "Nav-bar Profile";
+   background-color: #1c1c21;
+   min-width: 1000px;
 }
 
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.head{
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.contant_midl{
+    width: 833.44px;
+    margin-top: 20px;
+    background-color:#303033;
+}

@@ -1,7 +1,14 @@
 .Header{
-    grid-area: Header;
-    background-color: rgb(85, 141, 83);
-  }
-  .Header img{
+  min-width: 1000px;
     height: 60px;
+    background-color: #303033;
   }
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+.icon{
+  padding: 4px 4px;
+  max-height: 50px;
+}
