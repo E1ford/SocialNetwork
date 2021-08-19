@@ -1,23 +1,22 @@
 import React from 'react';
 import styles from './posts.module.css';
 import Post from './post/post';
+import {addPostActionCreator,updateTextPostActionCreator} from '../../../redux/state';
 
 
 
 let Posts = (props)=>{
-    
-
-    
-
+   
     let content = props.posts.map((item) => <Post messages={item.messages} likes={item.likes}/>);
 
     let refReactTextarea=React.createRef();
-
+    
     let click=()=>{
-        props.addPost(refReactTextarea.current.value);
+        props.dispatch(addPostActionCreator(refReactTextarea.current.value))
+        
     }
     let value=()=> {
-        props.updateTextPost(refReactTextarea.current.value)
+        props.dispatch(updateTextPostActionCreator(refReactTextarea.current.value))
     }
 
 

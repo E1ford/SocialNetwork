@@ -28,14 +28,15 @@ return(
                         <Route path="/Profile" render={()=> 
                         <Profile 
                         posts={props.store._state.profile.posts} 
-                        updateTextPost={props.updateTextPost}
                         newValue={props.store._state.profile.newValue}
-                        addPost={props.addPost}/>}/>
+                        dispatch={props.dispatch}
+                        />}/>
 
                         <Route path="/messages" render={()=> 
                         <Messages 
                             users={props.store.getState().mes.userData}
-                            dialogs={props.store.getState().mes.dialogData}/>}/>
+                            dialogs={props.store.getState().mes.dialogData}
+                        />}/>
                         
                         <Route path="/News" render={()=> 
                         <News/>}/>

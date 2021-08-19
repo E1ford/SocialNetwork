@@ -30,21 +30,27 @@ let store = {
     getState(){
         return this._state
     },
-    addPost(text){
-        debugger
-            store._state.profile.posts.unshift({messages:text, likes:'581'})
+    subscribe (observer){
+        this.render = observer;
+    },
+    dispatch(action){
+        if(action.type === "ADD-POST"){
+            if(!action.text == ''){
+                store._state.profile.posts.unshift({messages:action.text, likes:'581'})
             
             store._state.profile.newValue=""
             store.render(store.getState())
-        },
-
-    updateTextPost(value){
-        store._state.profile.newValue = value;
-        store.render(store.getState())
+            }
+            
+        }else if(action.type === "UPDATE-TEXT-POST"){
+            store._state.profile.newValue = action.value;
+            store.render(store.getState())
+        }
     },
-    subscribe (observer){
-        this.render = observer;
-    }
+    
 }
 
+
+export  let addPostActionCreator = (text)=>({type:"ADD-POST", text: text});
+export let updateTextPostActionCreator = (value)=>({type:"UPDATE-TEXT-POST", value: value});
 export default store;

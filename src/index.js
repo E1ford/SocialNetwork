@@ -12,8 +12,7 @@ let render = (state)=>{
     <React.StrictMode >
         <App 
             store={store}
-            addPost={store.addPost}
-            updateTextPost={store.updateTextPost}
+            dispatch={store.dispatch}
         />
     </React.StrictMode>,
     document.getElementById('root')
