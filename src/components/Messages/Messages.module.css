@@ -29,3 +29,35 @@
     width: 540px;
     background-color:#363535;
 }
+.dialog{
+    display: flex;
+    flex-direction: column;
+}
+.dialogTextarea{
+    align-self: flex-end;
+}
+.dialogTextarea textarea{
+    margin:30px 30px 30px 20px;
+    background-color: #424244;
+    width: 450px;
+    height: 80px;
+    resize: none;
+}
+.floatingButton {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 20px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #4a4b4b 0%, #252323 51%, #4a4b4b 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+  }
+  .floatingButton:hover {
+    background-position: right center;
+  }

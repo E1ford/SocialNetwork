@@ -11,7 +11,7 @@ let Posts = (props)=>{
 
     let refReactTextarea=React.createRef();
     
-    let click=()=>{
+    let sendPostClick=()=>{
         props.dispatch(addPostActionCreator(refReactTextarea.current.value))
         
     }
@@ -31,7 +31,7 @@ let Posts = (props)=>{
                     <textarea onChange={value} value={props.newValue} ref={refReactTextarea} placeholder="alt+f4 что бы открыть игру"></textarea>
                 </div>
                 <div>
-                    <button  onClick={click} className={styles.floatingButton}>запостить</button>
+                    <button  onClick={sendPostClick} className={styles.floatingButton}>запостить</button>
                 </div>
             </div>
             {content}

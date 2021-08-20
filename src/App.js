@@ -34,6 +34,8 @@ return(
 
                         <Route path="/messages" render={()=> 
                         <Messages 
+                            newValueMessages={props.store._state.mes.newValueMessages}
+                            dispatch={props.dispatch}
                             users={props.store.getState().mes.userData}
                             dialogs={props.store.getState().mes.dialogData}
                         />}/>
