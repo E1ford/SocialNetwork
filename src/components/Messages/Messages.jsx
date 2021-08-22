@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Messages.module.css';
 import Users from './Users/Users'
 import Dialog from './Dialog/Dialog'
-import {addMessagesActionCreator, updateTextMessagesActionCreator} from '../../redux/state';
+import {addMessagesActionCreator, updateTextMessagesActionCreator} from '../../redux/mesReducer';
 
 
 
