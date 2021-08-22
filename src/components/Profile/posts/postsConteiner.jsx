@@ -7,15 +7,18 @@ import {addPostActionCreator,updateTextPostActionCreator} from '../../../redux/p
 let PostsConteiner = (props)=>{
     
     let sendPostClick=(value)=>{
-        props.dispatch(addPostActionCreator(value))
+        props.store.dispatch(addPostActionCreator(value))
         
     }
     let updateNewValue=(value)=> {
-        props.dispatch(updateTextPostActionCreator(value))
+        props.store.dispatch(updateTextPostActionCreator(value))
     }
 
     return(   
-        <Posts posts={props.posts} updateNewValue={updateNewValue} newValue={props.newValue} sendPostClick={sendPostClick}/>
+        <Posts posts={props.store.getState().profile.posts} 
+        updateNewValue={updateNewValue} 
+        newValue={props.store.getState().profile.newValue} 
+        sendPostClick={sendPostClick}/>
     )
 }
 export default PostsConteiner;

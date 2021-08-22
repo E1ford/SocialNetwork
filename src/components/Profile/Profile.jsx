@@ -23,9 +23,7 @@ const Profile = (props) =>{
                     </div>
                 </div>
                 <PostsConteiner
-                posts={props.posts} 
-                newValue={props.newValue}
-                dispatch={props.dispatch}
+                store={props.store}
                 />
             </div>
             )

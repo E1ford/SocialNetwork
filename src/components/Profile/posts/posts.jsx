@@ -8,8 +8,8 @@ let Posts = (props)=>{
    
     let content = props.posts.map((item) => <Post messages={item.messages} likes={item.likes}/>);
 
-    let refReactTextarea=React.createRef();
-    let updateNewValue=()=>{props.updateNewValue(refReactTextarea.current.value)}
+    let refReactTextarea = React.createRef();
+    let updateNewValue = ()=>{props.updateNewValue(refReactTextarea.current.value)}
     let sendPostClick = ()=>{props.sendPostClick(refReactTextarea.current.value)}
 
     return(   
