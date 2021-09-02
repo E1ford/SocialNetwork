@@ -1,23 +1,15 @@
-import store from './redux/state'
+import store from './redux/reduxStore'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {Provider} from 'react-redux';
 
 
 
-
-let render = (state)=>{
-    ReactDOM.render( 
-    <React.StrictMode >
-        <App 
-            store={store}
-            dispatch={store.dispatch}
-        />
-    </React.StrictMode>,
+ReactDOM.render( 
+    <Provider store ={store}>
+        <App/>
+    </Provider>,
     document.getElementById('root')
-);}
-
-store.subscribe(render);
-
-render(store);
+)

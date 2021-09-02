@@ -22,9 +22,7 @@ const Profile = (props) =>{
                         </div>
                     </div>
                 </div>
-                <PostsConteiner
-                store={props.store}
-                />
+                <PostsConteiner/>
             </div>
             )
 }

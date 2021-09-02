@@ -26,14 +26,10 @@ return(
                     <div className="contant_midl">
 
                         <Route path="/Profile" render={()=> 
-                        <Profile 
-                        store={props.store}
-                        />}/>
+                        <Profile />}/>
 
                         <Route path="/messages" render={()=> 
-                        <MessagesContainer
-                            store={props.store}
-                        />}/>
+                        <MessagesContainer/>}/>
                         
                         <Route path="/News" render={()=> 
                         <News/>}/>
