@@ -25,10 +25,10 @@ return(
                     </div>
                     <div className="contant_midl">
 
-                        <Route path="/Profile" render={()=> 
+                        <Route exact path="/Profile" render={()=> 
                         <Profile />}/>
 
-                        <Route path="/messages" render={()=> 
+                        <Route  path="/Messages" render={()=> 
                         <MessagesContainer/>}/>
                         
                         <Route path="/News" render={()=> 

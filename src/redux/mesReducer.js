@@ -19,16 +19,17 @@ let initialState = {
 const mesReducer = (state = initialState, action)=>{
     switch(action.type){
         case "ADD-MESSAGES":{
-            let stateCopy = {...state};
-            stateCopy.dialogData = [...state.dialogData];
-            stateCopy.dialogData.push({text:action.text, id:"15"});
-            stateCopy.newValueMessages="";
-            return stateCopy;
+            return {
+                ...state,
+                dialogData: [...state.dialogData, {text:action.text, id:"15"}],
+                newValueMessages:""
+            }
         }
         case "UPDATE-TEXT-MESSAGES":{
-            let stateCopy = {...state};
-            stateCopy.newValueMessages = action.value;
-            return stateCopy;
+            return{
+                ...state,
+                newValueMessages:action.value
+            }
         }
         default:
             return state;
