@@ -7,6 +7,7 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MessagesContainer from './components/Messages/MessagesConteiner';
+import FindUsersContainer from './components/FindUsers/FindUsersConteiner';
 
 
 
@@ -36,6 +37,8 @@ return(
 
                         <Route path="/Music" render={()=> 
                         <Music/>}/>
+                        <Route path="/FindUsers" render={()=> 
+                        <FindUsersContainer/>}/>
 
                         <Route path="/Settings" render={()=> 
                         <Settings/>}/>
