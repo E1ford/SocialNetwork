@@ -1,5 +1,5 @@
 
-import {followActionCreator} from '../../redux/findUsersReducer';
+import {followActionCreator, setUsersActionCreator} from '../../redux/findUsersReducer';
 import FindUsers from './FindUsers';
 import { connect } from 'react-redux';
 
@@ -7,15 +7,15 @@ import { connect } from 'react-redux';
 
 let mapStateToProps =(state)=>{
     return{
-        user: state.findUsers.allUsers
+        users: state.findUsers.users
     }
 }
 let mapDispatchToProps =(dispatch)=>{
     return{
-        followDispatch:(id)=>{dispatch(followActionCreator(id))} 
+        followDispatch:(id)=>{dispatch(followActionCreator(id))},
+        setUsersDispatch:(users)=>{dispatch(setUsersActionCreator(users))}
     }
 }
-debugger
 const FindUsersContainer = connect(mapStateToProps,mapDispatchToProps)(FindUsers)
 
 export default FindUsersContainer;

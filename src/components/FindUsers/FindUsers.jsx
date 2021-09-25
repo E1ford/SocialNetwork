@@ -1,11 +1,16 @@
+import * as axios from 'axios';
 import React from 'react';
 import FindUser from './FindUser/FindUser';
-import styles from './FindUsers.module.css';
 
 
 const FindUsers = (props) =>{
-    
-    let usera = props.user.map((item) => 
+    if(props.users.length === 0 ){
+        axios.get("https://social-network.samuraijs.com/api/1.0/users")
+        .then( response => {
+        props.setUsersDispatch(response.data.items)
+        })
+    }
+    let usera = props.users.map((item) => 
     <FindUser 
     followDispatch={props.followDispatch} 
     follow={item.follow} 
