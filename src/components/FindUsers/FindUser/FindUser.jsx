@@ -9,7 +9,10 @@ const FindUser = ({follow,urlImg,name,country,city,id,followDispatch}) =>{
     return( 
         <div className={styles.wrapper}>
             <div className={styles.avatar}>
-                <img src={(urlImg === null)? urlImg: userPhoto } alt=''></img>
+                <div>
+                    <img src={(urlImg === null)? urlImg: userPhoto } alt=''>
+                    </img>
+                </div>
                 <div onClick={clickFollow} className={styles.follow}>{unfollow}</div>
             </div>
             <div className={styles.about}>

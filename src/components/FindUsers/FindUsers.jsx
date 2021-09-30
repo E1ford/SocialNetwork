@@ -4,18 +4,15 @@ import FindUser from './FindUser/FindUser';
 
 
 class FindUsers extends React.Component {
-    constructor(props){
-        super (props)
-        
-        if(this.props.users.length === 0 ){
-            axios.get("https://social-network.samuraijs.com/api/1.0/users")
+    componentDidMount(){
+        axios.get("https://social-network.samuraijs.com/api/1.0/users?count=3")
             .then( response => {
                 this.props.setUsersDispatch(response.data.items)
                 })
-            }
     }
-    
     render =()=>{
+        let pagesCount= this.props.totalUserCount/this.props.pageSize
+        
         return( 
                 <>
                 {this.props.users.map((item) => 

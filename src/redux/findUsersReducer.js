@@ -2,7 +2,11 @@
 const FOLLOW = 'FOLLOW',
     SET_USERS = 'SET_USERS';
 
-let initialState ={users:[]}
+let initialState ={
+    users:[],
+    pageSize: 5,
+    totalUserCount:1
+}
        
 
 const findUsersReducer =( state = initialState, action)=>{

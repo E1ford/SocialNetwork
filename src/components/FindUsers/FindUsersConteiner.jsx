@@ -7,7 +7,9 @@ import { connect } from 'react-redux';
 
 let mapStateToProps =(state)=>{
     return{
-        users: state.findUsers.users
+        users: state.findUsers.users,
+        pageSize: state.findUsers.pageSize,
+        totalUserCount: state.findUsers.totalUserCount
     }
 }
 let mapDispatchToProps =(dispatch)=>{
