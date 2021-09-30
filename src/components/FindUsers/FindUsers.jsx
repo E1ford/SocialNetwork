@@ -3,29 +3,34 @@ import React from 'react';
 import FindUser from './FindUser/FindUser';
 
 
-const FindUsers = (props) =>{
-    if(props.users.length === 0 ){
-        axios.get("https://social-network.samuraijs.com/api/1.0/users")
-        .then( response => {
-        props.setUsersDispatch(response.data.items)
-        })
+class FindUsers extends React.Component {
+    constructor(props){
+        super (props)
+        
+        if(this.props.users.length === 0 ){
+            axios.get("https://social-network.samuraijs.com/api/1.0/users")
+            .then( response => {
+                this.props.setUsersDispatch(response.data.items)
+                })
+            }
     }
-    let usera = props.users.map((item) => 
-    <FindUser 
-    followDispatch={props.followDispatch} 
-    follow={item.followed} 
-    urlImg={item.urlImg} 
-    name={item.name} 
-    country={item.country} 
-    city={item.city} 
-    id={item.id}/>
-);
-
-    return( 
-            <>
-                {usera}
-            </>
-    )
+    
+    render =()=>{
+        return( 
+                <>
+                {this.props.users.map((item) => 
+                <FindUser 
+                followDispatch={item.followDispatch} 
+                follow={item.followed} 
+                urlImg={item.urlImg} 
+                name={item.name} 
+                country={item.country} 
+                city={item.city} 
+                id={item.id}/>
+                )}
+                </>
+        )
+    }
 }
 
 export default FindUsers;
