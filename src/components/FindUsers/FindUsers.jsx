@@ -13,7 +13,7 @@ const FindUsers = (props) =>{
     let usera = props.users.map((item) => 
     <FindUser 
     followDispatch={props.followDispatch} 
-    follow={item.follow} 
+    follow={item.followed} 
     urlImg={item.urlImg} 
     name={item.name} 
     country={item.country} 
