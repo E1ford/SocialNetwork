@@ -1,0 +1,20 @@
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.allPages{
+
+    color:#eee;
+    background-color: black;
+    margin:5px;
+    padding:5px 10px 5px 10px
+}
+.allPages:hover{
+    cursor: pointer;
+}
+.activePages{
+    color:rgb(255, 1, 1);
+    background-color:blue;
+}
