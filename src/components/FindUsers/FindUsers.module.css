@@ -1,5 +1,8 @@
 
 .wrapper{
+    
+}
+.pagination{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

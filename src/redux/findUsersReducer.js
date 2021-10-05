@@ -6,10 +6,10 @@ const FOLLOW = 'FOLLOW',
 
 let initialState ={
     users:[],
-    //размер страницы
-    pageSize: 3,
+    //размер страницы(сколько пользователей вывести )
+    pageSize: 8,
     // сколько всего пользователей
-    totalUserCount:7,
+    totalUserCount:0,
     //выделенная страница
     currentPages:1
 }
