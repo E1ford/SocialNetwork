@@ -9,8 +9,8 @@ let Posts = (props)=>{
     let content = props.posts.map((item) => <Post messages={item.messages} likes={item.likes}/>);
 
     let refReactTextarea = React.createRef();
-    let updateNewValue = ()=>{props.updateNewValue(refReactTextarea.current.value)}
-    let sendPostClick = ()=>{props.sendPostClick(refReactTextarea.current.value)}
+    let updateTextPost = ()=>{props.updateTextPost(refReactTextarea.current.value)}
+    let addPost = ()=>{props.addPost(refReactTextarea.current.value)}
 
     return(   
         <div className={styles.posts}>
@@ -19,10 +19,10 @@ let Posts = (props)=>{
             </div>
             <div className={styles.form}>
                 <div>
-                    <textarea onChange={updateNewValue} value={props.newValue} ref={refReactTextarea} placeholder="alt+f4 что бы открыть игру"></textarea>
+                    <textarea onChange={updateTextPost} value={props.newValue} ref={refReactTextarea} placeholder="alt+f4 что бы открыть игру"></textarea>
                 </div>
                 <div>
-                    <button  onClick={sendPostClick} className={styles.floatingButton}>запостить</button>
+                    <button  onClick={addPost} className={styles.floatingButton}>запостить</button>
                 </div>
             </div>
             {content}

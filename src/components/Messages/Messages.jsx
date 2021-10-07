@@ -12,8 +12,8 @@ const Messages = (props) =>{
 
     let refReactTextarea = React.createRef();
     
-    let sendMessagesClick = () => props.sendMessagesClick(refReactTextarea.current.value);
-    let updateValue = () => props.updateValue(refReactTextarea.current.value);
+    let addMessages = () => props.addMessages(refReactTextarea.current.value);
+    let updateTextMessages = () => props.updateTextMessages(refReactTextarea.current.value);
 
     return( 
             <div className={styles.wrapper}>
@@ -30,11 +30,11 @@ const Messages = (props) =>{
                         </div>
                         <div className={styles.dialogTextarea}>
                             <textarea 
-                                onChange={updateValue} 
+                                onChange={updateTextMessages} 
                                 value={props.newValueMessages} 
                                 ref={refReactTextarea} placeholder="alt+f4" 
                             ></textarea>
-                            <button onClick={sendMessagesClick} className={styles.floatingButton}>sendMessages</button>
+                            <button onClick={addMessages} className={styles.floatingButton}>sendMessages</button>
                         </div>
                     </div>
                 </div>

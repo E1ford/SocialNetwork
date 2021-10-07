@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './FindUser.module.css';
 import userPhoto from '../../../assets/images/avatar2.png'
 
-const FindUser = ({follow,urlImg,name,country,city,id,followDispatch}) =>{
+const FindUser = ({follow,urlImg,name,country,city,id,followD}) =>{
     let unfollow = '  ';
     (follow)? unfollow = 'follow': unfollow = 'unfollow'
-    let  clickFollow = () =>{ followDispatch(id)}
+    let  clickFollow = () =>{ followD(id)}
     return( 
         <div className={styles.wrapper}>
             <div className={styles.avatar}>

@@ -2,7 +2,8 @@
 const FOLLOW = 'FOLLOW',
     SET_USERS = 'SET_USERS',
     SET_CURRENT_PAGE='SET_CURRENT_PAGE',
-    SET_TOTAL_USERS_COUNT='TOTAL_USERS_COUNT';
+    SET_TOTAL_USERS_COUNT='TOTAL_USERS_COUNT',
+    TOGLE_LOADING_STATUS = 'TOGLE_LOADING_STATUS';
 
 let initialState ={
     users:[],
@@ -11,7 +12,9 @@ let initialState ={
     // сколько всего пользователей
     totalUserCount:0,
     //выделенная страница
-    currentPages:1
+    currentPages:1,
+    //идет ли запрос на сервер ?
+    isFetching : false
 }
        
 
@@ -43,6 +46,12 @@ const findUsersReducer =( state = initialState, action)=>{
                 totalUserCount : action.totalUserCount
             }
         }
+        case TOGLE_LOADING_STATUS:{
+            return{
+                ...state, 
+                isFetching : action.status
+            }
+        }
         default:
              return state;
     }
@@ -51,8 +60,9 @@ const findUsersReducer =( state = initialState, action)=>{
 
 export default findUsersReducer;
 
-export  let followActionCreator = (id)=>({type:FOLLOW, id:id});
-export  let setUsersActionCreator = (users)=>({type:SET_USERS, users:users});
-export  let setCurrentPageAC = (num)=>({type:SET_CURRENT_PAGE, curentPage:num});
-export  let setTotalUsersCountAC = (num)=>({type:SET_TOTAL_USERS_COUNT, totalUserCount:num});
+export  let follow = (id)=>({type:FOLLOW, id:id});
+export  let setUsers = (users)=>({type:SET_USERS, users:users});
+export  let setCurrentPage = (num)=>({type:SET_CURRENT_PAGE, curentPage:num});
+export  let setTotalUsersCount = (num)=>({type:SET_TOTAL_USERS_COUNT, totalUserCount:num});
+export  let togleLoadingStatus = (status)=>({type:TOGLE_LOADING_STATUS, status:status});
 

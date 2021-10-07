@@ -39,5 +39,5 @@ const mesReducer = (state = initialState, action)=>{
 
 export default mesReducer;
 
-export  let addMessagesActionCreator = (text)=>({type:"ADD-MESSAGES", text: text});
-export let updateTextMessagesActionCreator = (value)=>({type:"UPDATE-TEXT-MESSAGES", value: value});
+export  let addMessages = (text)=>({type:"ADD-MESSAGES", text: text});
+export let updateTextMessages = (value)=>({type:"UPDATE-TEXT-MESSAGES", value: value});
