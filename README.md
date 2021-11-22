@@ -2,7 +2,7 @@ Dark side
 
 My first project on react.
 
-product link --- http/
+product link --- https://e1ford.github.io/SocialNetwork/
 
 technologies that were used:
 -React 
@@ -18,3 +18,6 @@ implemented functions:
 -
 -
 -
+
+
+

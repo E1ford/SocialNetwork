@@ -42,7 +42,6 @@ return(
 
                         <Route path="/Settings" render={()=> 
                         <Settings/>}/>
-                        
                     </div>
                 </div>
             </div>
