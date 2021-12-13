@@ -4,7 +4,7 @@ import Post from './post/post';
 
 
 
-let Posts = (props)=>{
+const Posts = (props)=>{
    
     let content = props.posts.map((item) => <Post messages={item.messages} likes={item.likes}/>);
 
