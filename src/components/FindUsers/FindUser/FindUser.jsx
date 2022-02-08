@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './FindUser.module.css';
 import userPhoto from '../../../assets/images/avatar2.png'
+import { NavLink } from 'react-router-dom';
 
 const FindUser = ({follow,urlImg,name,country,city,id,followD}) =>{
     let unfollow = '  ';
@@ -10,8 +11,9 @@ const FindUser = ({follow,urlImg,name,country,city,id,followD}) =>{
         <div className={styles.wrapper}>
             <div className={styles.avatar}>
                 <div>
-                    <img src={(urlImg === null)? urlImg: userPhoto } alt=''>
-                    </img>
+                    <NavLink to={`/profile/${id}`}>
+                        <img src={(urlImg === null)? urlImg: userPhoto } alt=''></img>
+                    </NavLink>
                 </div>
                 <div onClick={clickFollow} className={styles.follow}>{unfollow}</div>
             </div>

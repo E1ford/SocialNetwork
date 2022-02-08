@@ -16,25 +16,27 @@
 .posts textarea{
   margin:30px 30px 30px 20px;
   background-color: #424244;
+  border-radius:5px;
   width: 450px;
   height: 80px;
   resize: none;
 }
-.floatingButton {
-  text-decoration: none;
+.button8 {
   display: inline-block;
   color: white;
-  padding: 20px 30px;
-  margin: 10px 20px;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-image: linear-gradient(to right, #4a4b4b 0%, #252323 51%, #4a4b4b 100%);
-  background-size: 200% auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-  transition: .5s;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 1.5px solid ;
+  border-radius: 5px;
+  transition: 0.2s;
+  background:#303033;
+} 
+.button8:hover { 
+  background: rgba(255,255,255,.2); 
 }
-.floatingButton:hover {
-  background-position: right center;
+.button8:active { 
+  background: rgba(255,255,255,.5); 
 }

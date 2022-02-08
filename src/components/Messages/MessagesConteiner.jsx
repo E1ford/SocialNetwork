@@ -1,5 +1,5 @@
 
-import {addMessages, updateTextMessages} from '../../redux/mesReducer';
+import * as actionCreators from '../../redux/mesReducer';
 import Messages from './Messages';
 import { connect } from 'react-redux';
 
@@ -13,9 +13,6 @@ let mapStateToProps =(state)=>{
     }
 }
 
-const MessagesContainer = connect(mapStateToProps,{
-    updateTextMessages,
-    addMessages
-})(Messages)
+const MessagesContainer = connect(mapStateToProps,actionCreators)(Messages)
 
 export default MessagesContainer;

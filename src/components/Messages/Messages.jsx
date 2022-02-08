@@ -7,8 +7,8 @@ import Dialog from './Dialog/Dialog'
 
 const Messages = (props) =>{
 
-    let user = props.users.map((item)=> <Users id={item.id}  userName={item.userName}/>)
-    let dialog = props.dialogs.map((item)=> <Dialog text={item.text}/>)
+    let user = props.users.map((item, index)=> <Users key={700+index} id={item.id}  userName={item.userName}/>)
+    let dialog = props.dialogs.map((item, index)=> <Dialog key={600+index} text={item.text}/>)
 
     let refReactTextarea = React.createRef();
     

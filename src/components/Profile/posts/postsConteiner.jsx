@@ -9,7 +9,7 @@ let mapStateToProps =(state)=>{
     return{
         posts : state.profile.posts,
         newValue : state.profile.newValue
-
+        
     }
 }
 

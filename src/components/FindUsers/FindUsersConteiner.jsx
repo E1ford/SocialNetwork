@@ -1,5 +1,5 @@
 import React from 'react';
-import {follow, setUsers, setCurrentPage, setTotalUsersCount,togleLoadingStatus} from '../../redux/findUsersReducer';
+import * as actionCreator from '../../redux/findUsersReducer';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import FindUsers from './FindUsers';
@@ -44,12 +44,6 @@ let mapStateToProps =(state)=>{
     }
 }
 
-const FindUsersContainer = connect(mapStateToProps,{
-    follow,
-    setUsers,
-    setCurrentPage,
-    setTotalUsersCount,
-    togleLoadingStatus
-})(FindUsersContainerAPI)
+const FindUsersContainer = connect(mapStateToProps, actionCreator)(FindUsersContainerAPI)
 
 export default FindUsersContainer;

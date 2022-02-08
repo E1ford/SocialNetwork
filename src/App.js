@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import Profile from './components/Profile/Profile';
+import ProfileContainer from './components/Profile/ProfileContainer';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
@@ -26,8 +26,8 @@ return(
                     </div>
                     <div className="contant_midl">
 
-                        <Route exact path="/Profile" render={()=> 
-                        <Profile />}/>
+                        <Route exact path="/Profile/:userId?" render={()=> 
+                        <ProfileContainer />}/>
 
                         <Route  path="/Messages" render={()=> 
                         <MessagesContainer/>}/>

@@ -6,7 +6,7 @@ import Post from './post/post';
 
 const Posts = (props)=>{
    
-    let content = props.posts.map((item) => <Post messages={item.messages} likes={item.likes}/>);
+    let content = props.posts.map((item, index) => <Post key={index} messages={item.messages} likes={item.likes}/>);
 
     let refReactTextarea = React.createRef();
     let updateTextPost = ()=>{props.updateTextPost(refReactTextarea.current.value)}
@@ -22,7 +22,7 @@ const Posts = (props)=>{
                     <textarea onChange={updateTextPost} value={props.newValue} ref={refReactTextarea} placeholder="alt+f4 что бы открыть игру"></textarea>
                 </div>
                 <div>
-                    <button  onClick={addPost} className={styles.floatingButton}>запостить</button>
+                    <button  onClick={addPost} className={styles.button8}>запостить</button>
                 </div>
             </div>
             {content}

@@ -1,0 +1,27 @@
+
+
+.Profile img {
+  margin-top: 20px;
+  max-width:100%;
+}
+.aboutPhoto img{
+  max-width: 150px;
+  margin: 20px 80px 20px 20px;
+}
+.aboutMe{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.aboutText{
+  margin:20px 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.aboutText .title{
+  font-size: 30px;
+}
+.text li{
+  list-style-type:none;
+}

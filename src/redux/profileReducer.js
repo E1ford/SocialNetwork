@@ -5,6 +5,7 @@ let initialState = {
         {messages:"it's my social network", likes: '98'}
     ],
     newValue:'',
+    profile:null
 }
 
 const profileReducer = (state = initialState, action)=>{
@@ -22,6 +23,11 @@ const profileReducer = (state = initialState, action)=>{
                 newValue: action.value
             }
         }
+        case "SET-USER-PROFILE":{
+            return{
+                ...state, profile: action.profile
+            }
+        }
         default:
              return state;
     }
@@ -30,5 +36,6 @@ const profileReducer = (state = initialState, action)=>{
 
 export default profileReducer;
 
+export  let setUserProfile = (profile)=>({type:"SET-USER-PROFILE", profile});
 export  let addPost = (text)=>({type:"ADD-POST", text: text});
-export let updateTextPost = (value)=>({type:"UPDATE-TEXT-POST", value: value});
+export let updateTextPost = (value)=>({type:"UPDATE-TEXT-POST", value});

@@ -18,14 +18,15 @@ const FindUsers = (props)=>{
             {props.isFetching && <Spiner/>}
                 
             <div className={styles.pagination}>
-                {pages.map((p) => {
-                    return<div className={ styles.allPages + ' ' + (props.currentPages === p && styles.activePages)} 
+                {pages.map((p,index) => {
+                    return<div key={index} className={ styles.allPages + ' ' + (props.currentPages === p && styles.activePages)} 
                                 onClick={(e)=>{props.onChangePage(p)}}>{p}</div>})
                 }
             </div>
             <div>
             {props.users.map((item) => 
                 <FindUser 
+                key={item.id}
                 followD={item.follow} 
                 follow={item.followed} 
                 urlImg={item.urlImg} 
