@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/HeaderContainer/HeaderContainer';
 import Navbar from './components/Navbar/Navbar';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import News from './components/News/News';
@@ -14,33 +14,33 @@ import FindUsersContainer from './components/FindUsers/FindUsersConteiner';
 
 
 
-const App =(props)=>{
+const App =()=>{
 return(
     <BrowserRouter>
         <div className="Wrapper">
             <div className="head">
-                <Header/>
+                <HeaderContainer/>
                 <div className="content container">
                     <div className="navigation">
                             <Navbar/>
                     </div>
                     <div className="contant_midl">
 
-                        <Route exact path="/Profile/:userId?" render={()=> 
+                        <Route exact path="/profile/:userId?" render={()=> 
                         <ProfileContainer />}/>
 
-                        <Route  path="/Messages" render={()=> 
+                        <Route  path="/messages" render={()=> 
                         <MessagesContainer/>}/>
                         
-                        <Route path="/News" render={()=> 
+                        <Route path="/news" render={()=> 
                         <News/>}/>
 
-                        <Route path="/Music" render={()=> 
+                        <Route path="/music" render={()=> 
                         <Music/>}/>
-                        <Route path="/FindUsers" render={()=> 
+                        <Route path="/findUsers" render={()=> 
                         <FindUsersContainer/>}/>
 
-                        <Route path="/Settings" render={()=> 
+                        <Route path="/settings" render={()=> 
                         <Settings/>}/>
                     </div>
                 </div>
