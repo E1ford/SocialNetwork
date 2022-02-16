@@ -7,7 +7,10 @@ const Header = ({isAuth, login}) =>{
     return (
         <div className={styles.Header}>
             <div className={styles.container}>
+            <NavLink to={'/profile'}>
                 <img className={styles.icon} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1724px-Apple_logo_black.svg.png" alt=""></img>
+            </NavLink>
+                
                 <div className={styles.login}>
                     <NavLink to={'/login'}>
                         {!isAuth? 'log in': login}

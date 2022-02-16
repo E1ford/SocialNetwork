@@ -1,17 +1,20 @@
 import React from 'react';
 import styles from './ProfileInfo.module.css';
 import Spiner from '../../common/spiner/Spiner';
+import defaultAvatar from '../../../assets/images/avatar2.png';
+
 
 const ProfileInfo = ({profile}) =>{
     // защита от ошибки пропров
-    if(!profile){
+    if(!profile){ 
         return <Spiner/>
-    }
+    } 
     return( <>
                 <img src="https://www.softrew.ru/wp-content/cache/thumb/75/fb4c03e3eee2d75_810x260.png" alt=""></img>
                 <div className={styles.aboutMe}>
                     <div className={styles.aboutPhoto}>
-                        <img src={profile.photos.large} alt=""></img>
+                        <img src={(profile.photos.large === null||profile.photos.large===undefined)? defaultAvatar: profile.photos.large } alt=''></img>
+
                     </div>
                     <div className={styles.aboutText}>
                         <div className={styles.title}>

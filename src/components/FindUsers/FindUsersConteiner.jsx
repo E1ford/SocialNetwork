@@ -22,7 +22,7 @@ class FindUsersContainerAPI extends React.Component {
                 this.props.setUsers(response.data.items);
                 this.props.togleLoadingStatus(false);
             })
-    }
+    } 
     render =()=>{
         return <FindUsers onChangePage={this.onChangePage} 
         currentPages={this.props.currentPages}

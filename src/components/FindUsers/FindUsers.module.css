@@ -1,6 +1,6 @@
 
 .wrapper{
-    
+
 }
 .pagination{
     display: flex;
@@ -8,7 +8,6 @@
     flex-wrap: wrap;
 }
 .allPages{
-
     color:#eee;
     background-color: black;
     margin:5px;
@@ -20,4 +19,62 @@
 .activePages{
     color:rgb(255, 1, 1);
     background-color:blue;
+}
+
+/*  */
+/* 
+ */
+ /* 
+  */
+.paginator {
+    width: auto;
+    padding: 10px;
+    margin: 30px auto;
+    white-space: nowrap;
+    background: #ecf0f1;
+}
+
+.paginator li,
+.paginator span {
+    display: inline-block;
+    min-width: 20px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background: #a5a6a7;
+}
+
+.paginator .prev {
+    margin-right: 20px;
+    background-image: url("https://htmlacademy.ru/assets/course14/arrows.png");
+    background-repeat :no-repeat ;
+    background-position: 0px 0px;
+}
+
+.paginator .next {
+    margin-left: 20px;
+    background-image: url("https://htmlacademy.ru/assets/course14/arrows.png");
+    background-repeat :no-repeat ;
+    background-position: 0px -40px;
+}
+.paginator .current {
+    background-color: #666969;
+}
+
+.paginator li:hover {
+    background-color: #909492;
+}
+/* запрет выделения текста */
+.paginator .next,.paginator .prev, .zxc, .next{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
 }

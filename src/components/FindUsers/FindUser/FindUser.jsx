@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './FindUser.module.css';
-import userPhoto from '../../../assets/images/avatar2.png'
+import defaultAvatar from '../../../assets/images/avatar2.png'
 import { NavLink } from 'react-router-dom';
 
-const FindUser = ({follow,urlImg,name,country,city,id,followD}) =>{
+const FindUser = ({follow,photos,name,country,city,id,followD}) =>{
     let unfollow = '  ';
     (follow)? unfollow = 'follow': unfollow = 'unfollow'
     let  clickFollow = () =>{ followD(id)}
@@ -12,7 +12,9 @@ const FindUser = ({follow,urlImg,name,country,city,id,followD}) =>{
             <div className={styles.avatar}>
                 <div>
                     <NavLink to={`/profile/${id}`}>
-                        <img src={(urlImg === null)? urlImg: userPhoto } alt=''></img>
+                        <img src={
+                            (photos.large === null )? defaultAvatar : photos.large
+                        } alt=''></img>
                     </NavLink>
                 </div>
                 <div onClick={clickFollow} className={styles.follow}>{unfollow}</div>
