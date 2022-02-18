@@ -1,5 +1,6 @@
 
 const FOLLOW = 'FOLLOW',
+    UNFOLLOW = 'UNFOLLOW',
     SET_USERS = 'SET_USERS',
     SET_CURRENT_PAGE='SET_CURRENT_PAGE',
     SET_TOTAL_USERS_COUNT='TOTAL_USERS_COUNT',
@@ -21,10 +22,19 @@ let initialState ={
 const findUsersReducer =( state = initialState, action)=>{
     switch(action.type){
         case FOLLOW:{
-            let stateCopy = JSON.parse(JSON.stringify(state))
-            stateCopy.forEach((i) => {
+            let stateCopy = JSON.parse(JSON.stringify(state));
+            stateCopy.users.forEach((i) => {
                 if(i.id === action.id){
-                    (i.followed) ? i.followed = false : i.followed = true;
+                    i.followed = true;
+                }
+            })
+            return stateCopy
+        }
+        case UNFOLLOW:{
+            let stateCopy = JSON.parse(JSON.stringify(state));
+            stateCopy.users.forEach((i) => {
+                if(i.id === action.id){
+                    i.followed =  false 
                 }
             })
             return stateCopy
@@ -60,9 +70,10 @@ const findUsersReducer =( state = initialState, action)=>{
 
 export default findUsersReducer;
 
-export  let follow = (id)=>({type:FOLLOW, id:id});
-export  let setUsers = (users)=>({type:SET_USERS, users:users});
+export  let onFollow = (id)=>({type:FOLLOW, id});
+export  let onUnfollow = (id)=>({type:UNFOLLOW, id});
+export  let setUsers = (users)=>({type:SET_USERS, users});
 export  let setCurrentPage = (num)=>({type:SET_CURRENT_PAGE, curentPage:num});
 export  let setTotalUsersCount = (num)=>({type:SET_TOTAL_USERS_COUNT, totalUserCount:num});
-export  let togleLoadingStatus = (status)=>({type:TOGLE_LOADING_STATUS, status:status});
+export  let togleLoadingStatus = (status)=>({type:TOGLE_LOADING_STATUS, status});
 

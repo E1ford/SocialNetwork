@@ -1,7 +1,4 @@
 
-.wrapper{
-
-}
 .pagination{
     display: flex;
     flex-direction: row;
@@ -49,19 +46,6 @@
     background: #a5a6a7;
 }
 
-.paginator .prev {
-    margin-right: 20px;
-    background-image: url("https://htmlacademy.ru/assets/course14/arrows.png");
-    background-repeat :no-repeat ;
-    background-position: 0px 0px;
-}
-
-.paginator .next {
-    margin-left: 20px;
-    background-image: url("https://htmlacademy.ru/assets/course14/arrows.png");
-    background-repeat :no-repeat ;
-    background-position: 0px -40px;
-}
 .paginator .current {
     background-color: #666969;
 }

@@ -18,15 +18,18 @@
 }
 
 .follow {
+    border-radius:15px;
+    background-color: #666969;
+    padding: 8px 20px;
     color: #eee;
 }
-
-.about {}
-
+.follow:hover{
+    cursor: pointer;
+    background-color: #1964af;
+}
 .left {
     color: #eee;
 }
-
 .right {
     color: #eee;
 }

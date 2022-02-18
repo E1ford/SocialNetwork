@@ -54,14 +54,16 @@ const FindUsers = (props)=>{
             <div>
                 {props.users.map((item) => 
                     <FindUser 
-                    key={item.id}
-                    followD={item.follow} 
-                    follow={item.followed} 
-                    photos={item.photos} 
-                    name={item.name} 
-                    country={item.country} 
-                    city={item.city} 
-                    id={item.id}/>)
+                        onUnfollow={props.onUnfollow}
+                        onFollow={props.onFollow}
+                        key={item.id} 
+                        followed={item.followed} 
+                        photos={item.photos} 
+                        name={item.name} 
+                        country={item.country} 
+                        city={item.city} 
+                        id={item.id}
+                    />)
                 }
             </div>
         </div>

@@ -1,36 +1,41 @@
 import React from 'react';
 import * as actionCreator from '../../redux/findUsersReducer';
 import { connect } from 'react-redux';
-import axios from 'axios';
 import FindUsers from './FindUsers';
+import usersAPI from './../../api/requests';
 
 class FindUsersContainerAPI extends React.Component {
     componentDidMount(){
         this.props.togleLoadingStatus(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPages}&count=${this.props.pageSize}`)
-            .then( response => {
-                this.props.setUsers(response.data.items);
-                this.props.setTotalUsersCount(response.data.totalCount);
+        usersAPI.requestGetUsersPage(this.props.currentPages,this.props.pageSize)
+        .then( response => {
+            debugger
+                this.props.setUsers(response.items);
+                this.props.setTotalUsersCount(response.totalCount);
                 this.props.togleLoadingStatus(false);
             })
+            
     };
     onChangePage = (pageNum) => {
         this.props.setCurrentPage(pageNum);
         this.props.togleLoadingStatus(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNum}&count=${this.props.pageSize}`)
-            .then( response => {
-                this.props.setUsers(response.data.items);
+        usersAPI.requestGetUsersPage(pageNum,this.props.pageSize)
+        .then( response => {
+                this.props.setUsers(response.items);
                 this.props.togleLoadingStatus(false);
             })
     } 
     render =()=>{
-        return <FindUsers onChangePage={this.onChangePage} 
-        currentPages={this.props.currentPages}
-        totalUserCount={this.props.totalUserCount}
-        pageSize={this.props.pageSize}
-        users={this.props.users}
-        isFetching={this.props.isFetching}
-            />
+        return <FindUsers 
+            onChangePage={this.onChangePage} 
+            currentPages={this.props.currentPages}
+            totalUserCount={this.props.totalUserCount}
+            pageSize={this.props.pageSize}
+            users={this.props.users}
+            isFetching={this.props.isFetching}
+            onFollow={this.props.onFollow}
+            onUnfollow={this.props.onUnfollow}
+        />
     }
 }
 
