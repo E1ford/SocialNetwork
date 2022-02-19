@@ -2,34 +2,22 @@ import React from 'react';
 import styles from './FindUser.module.css';
 import defaultAvatar from '../../../assets/images/avatar2.png'
 import { NavLink } from 'react-router-dom';
-import usersAPI from '../../../api/requests';
 
 
 
-
-const FindUser = ({onUnfollow,followed,photos,name,country,city,id,onFollow}) =>{
+const FindUser = ({PostFollowUserThunk,followed,photos,name,country,city,id,DeleteFollowUserThunk}) =>{
     
     let unfollow = ' ';
     (!followed)? unfollow = 'follow': unfollow = 'unfollow'
 
 
     let  clickFollow = (userId) =>{ 
-        switch (unfollow) {
+        switch (unfollow) { 
             case 'unfollow':
-                usersAPI.requestDeleteFollowUser(userId)
-                    .then( response => {
-                        if(response.data.resultCode === 0){
-                            onUnfollow(userId)
-                        } 
-                    })
+                DeleteFollowUserThunk(userId)
                 break;
             case 'follow':
-                usersAPI.requestPostFollowUser(userId)
-                    .then( response => {
-                        if(response.data.resultCode === 0){
-                            onFollow(userId)
-                        } 
-                    })
+                PostFollowUserThunk(userId)
                 break;
             default:
                 break;

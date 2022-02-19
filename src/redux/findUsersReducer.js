@@ -1,4 +1,7 @@
 
+import {usersAPI} from '../api/api';
+
+
 const FOLLOW = 'FOLLOW',
     UNFOLLOW = 'UNFOLLOW',
     SET_USERS = 'SET_USERS',
@@ -76,4 +79,37 @@ export  let setUsers = (users)=>({type:SET_USERS, users});
 export  let setCurrentPage = (num)=>({type:SET_CURRENT_PAGE, curentPage:num});
 export  let setTotalUsersCount = (num)=>({type:SET_TOTAL_USERS_COUNT, totalUserCount:num});
 export  let togleLoadingStatus = (status)=>({type:TOGLE_LOADING_STATUS, status});
+
+
+export  let getUsersThunk = (currentPages,pageSize)=>{
+    return (dispatch)=>{
+        dispatch(togleLoadingStatus(true));
+            usersAPI.requestGetUsersPage(currentPages,pageSize)
+            .then( response => {
+                dispatch(setUsers(response.items));
+                dispatch(setTotalUsersCount(response.totalCount));
+                dispatch(togleLoadingStatus(false));
+            })
+    }
+};
+export  let DeleteFollowUserThunk = (userId)=>{
+    return (dispatch)=>{
+        usersAPI.requestDeleteFollowUser(userId)
+                    .then( response => {
+                        if(response.data.resultCode === 0){
+                            dispatch(onUnfollow(userId))
+                        } 
+                    })
+    }
+};
+export  let PostFollowUserThunk = (userId)=>{
+    return (dispatch)=>{
+        usersAPI.requestPostFollowUser(userId)
+                    .then( response => {
+                        if(response.data.resultCode === 0){
+                            dispatch(onFollow(userId))
+                        } 
+                    })
+    }
+};
 

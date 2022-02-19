@@ -10,8 +10,6 @@ import styles from './FindUsers.module.css';
 const FindUsers = (props)=>{
     let [activePage,setActivePage]= useState(1);
 
-    
-
     let pagesCount = Math.ceil(props.totalUserCount/props.pageSize)
     let pages=[];
     for(let i=1; i<=pagesCount; i++){
@@ -34,8 +32,6 @@ const FindUsers = (props)=>{
     return( 
     
         <div className={styles.wrapper}>
-            
-                
             <div className={styles.pagination}>
                 <div className={styles.paginator}>
                     <li onClick={()=>{onChangePage(-1)}} className={styles.prev}>Назад</li>
@@ -45,17 +41,11 @@ const FindUsers = (props)=>{
                     <li  onClick={()=>{onChangePage(1)}} className={styles.next}>Вперёд</li>
                 </div>
                 {props.isFetching && <Spiner/>}
-
-                {/* {pages.map((p,index) => {
-                    return<div key={index} className={ styles.allPages + ' ' + (props.currentPages === p && styles.activePages)} 
-                                onClick={(e)=>{props.onChangePage(p)}}>{p}</div>})
-                } */}
             </div>
             <div>
                 {props.users.map((item) => 
                     <FindUser 
-                        onUnfollow={props.onUnfollow}
-                        onFollow={props.onFollow}
+                        {...props}
                         key={item.id} 
                         followed={item.followed} 
                         photos={item.photos} 

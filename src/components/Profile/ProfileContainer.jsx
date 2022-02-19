@@ -3,7 +3,7 @@ import Profile from "./Profile";
 import { connect} from 'react-redux';
 import {setUserProfile} from '../../redux/profileReducer'
 import {withRouter} from 'react-router-dom'
-import usersAPI from './../../api/requests';
+import {usersAPI} from '../../api/api';
 
 class ProfileContainer extends React.Component{
     

@@ -11,7 +11,7 @@ const instance = axios.create({
 })
 
 
-const usersAPI = {
+export const usersAPI = {
     //получить страницы с юзерами возвращает уже готовую дату
     requestGetUsersPage:(currentPages,pageSize)=>{
         return  instance.get(`users?page=${currentPages}&count=${pageSize}`).then(response=> response.data)
@@ -24,18 +24,14 @@ const usersAPI = {
     requestPostFollowUser :(userId)=>{
         return  instance.post(`follow/${userId}`)
     },
+    //получение профиля пользователей
+    getProfile:(userId)=>{
+        return  instance.get(`profile/${userId}`)
+    }
+}
+export const authAPI = {
     //проверяет аутентификацию 
     requestVerifyAuth:()=>{
         return  instance.get(`auth/me`)
-    },
-    //проверяет аутентификацию 
-    getProfile:(userId)=>{
-        return  instance.get(`profile/${userId}`)
-    },
+    }
 }
-
-
-
-
-
-export default usersAPI;

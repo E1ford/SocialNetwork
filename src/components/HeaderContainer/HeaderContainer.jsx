@@ -2,23 +2,12 @@ import React from 'react';
 import Header from './Header/Header'
 import * as actionCreator from '../../redux/authReducer'
 import { connect} from 'react-redux';
-import usersAPI from './../../api/requests';
-
 
 
 class  HeaderContainerAPI extends React.Component{
     componentDidMount(){
-        this.props.togleLoadingStatus(true);
-        usersAPI.requestVerifyAuth()
-            .then( response => {
-                if(response.data.resultCode ===0 ){
-                    this.props.setUserData(response.data.data);
-                    this.props.togleAuthStatus(true);
-                }else{
-                    this.props.togleAuthStatus(false);
-                }
-                this.props.togleLoadingStatus(false);
-            })
+        // проверка верификации
+        this.props.requestVerifyAuthThunk();
     }
     render(){
         return (
