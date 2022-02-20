@@ -8,8 +8,7 @@ import Settings from './components/Settings/Settings';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MessagesContainer from './components/Messages/MessagesConteiner';
 import FindUsersContainer from './components/FindUsers/FindUsersConteiner';
-
-
+import Login from './components/Login/Login';
 
 
 
@@ -42,6 +41,9 @@ return(
 
                         <Route path="/settings" render={()=> 
                         <Settings/>}/>
+
+                        <Route path="/login" render={()=> 
+                        <Login/>}/>
                     </div>
                 </div>
             </div>

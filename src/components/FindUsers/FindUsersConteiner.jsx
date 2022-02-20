@@ -2,6 +2,8 @@ import React from 'react';
 import * as actionCreator from '../../redux/findUsersReducer';
 import { connect } from 'react-redux';
 import FindUsers from './FindUsers';
+import { compose } from 'redux';
+import { withAuthRedirect } from './../../hoc/withAuthRedirect';
 
 class FindUsersContainerAPI extends React.Component {
     componentDidMount(){
@@ -28,7 +30,7 @@ let mapStateToProps =(state)=>{
         isFetching: state.findUsers.isFetching
     }
 }
-
-const FindUsersContainer = connect(mapStateToProps, actionCreator)(FindUsersContainerAPI)
- 
-export default FindUsersContainer;
+export default compose(
+    connect(mapStateToProps, actionCreator),
+    withAuthRedirect
+)(FindUsersContainerAPI);

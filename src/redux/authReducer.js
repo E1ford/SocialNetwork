@@ -50,7 +50,7 @@ export  let requestVerifyAuthThunk = ()=>{
         dispatch(togleLoadingStatus(true));
         authAPI.requestVerifyAuth()
         .then( response => {
-            if(response.data.resultCode ===0 ){
+            if(response.data.resultCode === 0 ){
                 dispatch(setUserData(response.data.data));
                 dispatch(togleAuthStatus(true));
             }else{

@@ -6,9 +6,7 @@ import defaultAvatar from '../../../assets/images/avatar2.png';
 
 const ProfileInfo = ({profile}) =>{
     // защита от ошибки пропров
-    if(!profile){ 
-        return <Spiner/>
-    } 
+    if(!profile) return <Spiner/>
     return( <>
                 <img src="https://www.softrew.ru/wp-content/cache/thumb/75/fb4c03e3eee2d75_810x260.png" alt=""></img>
                 <div className={styles.aboutMe}>

@@ -3,8 +3,6 @@ import styles from './Messages.module.css';
 import Users from './Users/Users'
 import Dialog from './Dialog/Dialog'
 
-
-
 const Messages = (props) =>{
 
     let user = props.users.map((item, index)=> <Users key={700+index} id={item.id}  userName={item.userName}/>)
@@ -15,7 +13,7 @@ const Messages = (props) =>{
     let addMessages = () => props.addMessages(refReactTextarea.current.value);
     let updateTextMessages = () => props.updateTextMessages(refReactTextarea.current.value);
 
-    return( 
+  return( 
             <div className={styles.wrapper}>
                 <div className={styles.wrapper_users}>
                     <div className={styles.title}>
