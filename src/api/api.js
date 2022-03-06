@@ -26,7 +26,8 @@ export const usersAPI = {
     },
     //получение профиля пользователей
     getProfile:(userId)=>{
-        return  instance.get(`profile/${userId}`)
+        console.warn('используете старый код')
+        return  profileAPI.getProfile(userId)
     }
 }
 export const authAPI = {
@@ -34,4 +35,16 @@ export const authAPI = {
     requestVerifyAuth:()=>{
         return  instance.get(`auth/me`)
     }
+}
+export const profileAPI = {
+    //получение профиля пользователей
+    getProfile:(userId)=>{
+        return  instance.get(`profile/${userId}`)
+    },
+    getStatus:(userId)=>{
+        return  instance.get(`profile/status/${userId}`)
+    },
+    updateStatus:(status)=>{
+        return  instance.put(`profile/status`, {status})
+    },
 }

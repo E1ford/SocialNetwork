@@ -2,9 +2,10 @@ import React from 'react';
 import styles from './ProfileInfo.module.css';
 import Spiner from '../../common/spiner/Spiner';
 import defaultAvatar from '../../../assets/images/avatar2.png';
+import ProfileStatus from './ProfileStatus/ProfileStatus';
 
 
-const ProfileInfo = ({profile}) =>{
+const ProfileInfo = ({profile,status,updateStatusThunk}) =>{
     // защита от ошибки пропров
     if(!profile) return <Spiner/>
     return( <>
@@ -12,7 +13,7 @@ const ProfileInfo = ({profile}) =>{
                 <div className={styles.aboutMe}>
                     <div className={styles.aboutPhoto}>
                         <img src={(profile.photos.large === null||profile.photos.large===undefined)? defaultAvatar: profile.photos.large } alt=''></img>
-
+                        <ProfileStatus updateStatusThunk={updateStatusThunk} status={status}/>
                     </div>
                     <div className={styles.aboutText}>
                         <div className={styles.title}>
