@@ -1,0 +1,22 @@
+.News{
+    width: 490px;
+    margin: 100px auto;
+}
+.canva{
+    cursor:none;
+    background:#eee;
+}
+.start{
+    cursor:pointer;
+    text-align: center;
+    width: 480px;
+    background:rgb(48, 177, 31)
+}
+
+.cheat{
+    margin-top:20px;
+    cursor:pointer;
+    text-align: center;
+    width: 480px;
+    background:rgb(209, 40, 40)
+}

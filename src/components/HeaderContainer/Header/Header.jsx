@@ -17,7 +17,6 @@ const Header = ({isAuth, login,logoutThunk}) =>{
                         </NavLink>
                     </div>
                     {!isAuth? <div className={styles.buttonWelcome}>войти</div>: <div onClick={logoutThunk} className={styles.buttonWelcome}>выйти</div>}
-                    {/* <div className={styles.buttonWelcome}>{!isAuth? 'войти': "выйти"}</div> */}
                 </div>
             </div>
         </div>

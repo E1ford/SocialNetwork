@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderContainer from './components/HeaderContainer/HeaderContainer';
 import Navbar from './components/Navbar/Navbar';
 import ProfileContainer from './components/Profile/ProfileContainer';
-import News from './components/News/News';
+import Games from './components/Games/Games';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -31,8 +31,8 @@ return(
                         <Route  path="/messages" render={()=> 
                         <MessagesContainer/>}/>
                         
-                        <Route path="/news" render={()=> 
-                        <News/>}/>
+                        <Route path="/games" render={()=> 
+                        <Games/>}/>
 
                         <Route path="/music" render={()=> 
                         <Music/>}/>
