@@ -6,6 +6,7 @@ import authReducer from './authReducer';
 import thunkMiddleware from 'redux-thunk'
 
 
+
 let reducers = combineReducers({
     profile: profileReducer,
     messages: mesReducer,

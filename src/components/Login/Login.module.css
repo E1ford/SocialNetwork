@@ -1,0 +1,11 @@
+.loginWrapper{
+    margin: 0 auto;
+    width:180px;
+}
+.welcome{
+    cursor: pointer;
+    width:90px;
+    margin-top:10px;
+    background-color:rgb(41, 39, 36);
+    text-align: center;
+}

@@ -16,6 +16,7 @@ let initialState = {
 const authReducer = (state = initialState, action)=>{
     switch(action.type){
         case "SET_USER_DATA":{
+            console.log(action.userData)
             return{
                 ...state,
                 ...action.userData
@@ -57,6 +58,33 @@ export  let requestVerifyAuthThunk = ()=>{
                 dispatch(togleAuthStatus(false));
             }
             dispatch(togleLoadingStatus(false));
+        })
+    }
+};
+export  let loginThunk = (email,password)=>{
+    return (dispatch)=>{
+        authAPI.authLogin(email,password)
+        .then( response => {
+            if(response.data.resultCode===0){
+                dispatch(requestVerifyAuthThunk(response.data.userId))
+            }
+            
+        })
+    }
+};
+export  let logoutThunk = ()=>{
+    return (dispatch)=>{
+        authAPI.logout()
+        .then( response => {
+            if(response.data.resultCode===0){
+                dispatch(setUserData({
+                    id:null, 
+                    email: null, 
+                    login: null,
+                    isAuth: false
+                }))
+            }
+            
         })
     }
 };

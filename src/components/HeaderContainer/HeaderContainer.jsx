@@ -12,6 +12,7 @@ class  HeaderContainerAPI extends React.Component{
     render(){
         return (
             <Header 
+                logoutThunk={this.props.logoutThunk}
                 isAuth={this.props.isAuth}
                 login={this.props.login}/>
         )

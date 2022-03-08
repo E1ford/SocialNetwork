@@ -34,6 +34,17 @@ export const authAPI = {
     //проверяет аутентификацию 
     requestVerifyAuth:()=>{
         return  instance.get(`auth/me`)
+    },
+    // логинизация
+    authLogin:(email,password,rememberMe=true)=>{
+        return  instance.post(`auth/login`,{
+            email,password,rememberMe
+        })
+    },
+    logout:(email,password,rememberMe=true)=>{
+        return  instance.delete(`auth/login`,{
+            email,password,rememberMe
+        })
     }
 }
 export const profileAPI = {
