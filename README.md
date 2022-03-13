@@ -1,23 +1,32 @@
-Dark side
+# Dark side
+Что бы посмотреть сайт перейдите по  [ссылке](https://e1ford.github.io/SocialNetwork/) 
 
-My first project on react.
+Используйте эти данные для входа | Email: free@samuraijs.com | Password: free |
 
-product link --- https://e1ford.github.io/SocialNetwork/
+## Используемые технологии:
++ React 
++ Redux
++ axios 
++ react-router-dom
++ react-redux
 
-technologies that were used:
--React 
--Redux
--axios 
--react-router-dom
--react-redux
+## Уже реализованно :heavy_check_mark::
 
-implemented functions:
--registration
--chat with other users
--
--
--
--
++ registration
++ chat with other users
++ 
++ 
++ 
++ 
++ 
++ 
++ 
 
-
+## Ожидаемый функционал:
++ 
++ 
++ 
++ 
++ 
++ 
 
