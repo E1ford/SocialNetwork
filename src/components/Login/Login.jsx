@@ -23,7 +23,7 @@ let Login =({loginThunk,isAuth})=>{
         }
     }
     if(isAuth){
-        return <Redirect to='/SocialNetwork/games'></Redirect>
+        return <Redirect to='/games'></Redirect>
     }
     return (
         <div className={styles.loginWrapper}>
