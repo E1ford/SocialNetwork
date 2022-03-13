@@ -65,6 +65,8 @@ export  let loginThunk = (email,password)=>{
     return (dispatch)=>{
         authAPI.authLogin(email,password)
         .then( response => {
+            console.log(response);
+            
             if(response.data.resultCode===0){
                 dispatch(requestVerifyAuthThunk(response.data.userId))
             }

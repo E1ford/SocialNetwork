@@ -12,7 +12,6 @@ let Login =({loginThunk,isAuth})=>{
     let [password,setPassword]=React.useState('')
 
     let onSendAuthRequest = ()=>{
-        console.log({login,password})
         loginThunk(login,password)
     }
     let onChangeValue=(e)=>{
@@ -24,7 +23,7 @@ let Login =({loginThunk,isAuth})=>{
         }
     }
     if(isAuth){
-        return <Redirect to='/games'></Redirect>
+        return <Redirect to='/SocialNetwork/games'></Redirect>
     }
     return (
         <div className={styles.loginWrapper}>

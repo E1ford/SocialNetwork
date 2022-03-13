@@ -24,4 +24,5 @@ const Games = () =>{
             </div>
             )
 }
-export default compose(withAuthRedirect)(Games);
+// export default compose(withAuthRedirect)(Games);
+export default Games

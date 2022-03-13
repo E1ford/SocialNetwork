@@ -25,24 +25,24 @@ return(
                     </div>
                     <div className="contant_midl">
 
-                        <Route exact path="/profile/:userId?" render={()=> 
+                        <Route exact path="/SocialNetwork/profile/:userId?" render={()=> 
                         <ProfileContainer />}/>
 
-                        <Route  path="/messages" render={()=> 
+                        <Route  path="/SocialNetwork/messages" render={()=> 
                         <MessagesContainer/>}/>
                         
-                        <Route path="/games" render={()=> 
+                        <Route path="/SocialNetwork/games" render={()=> 
                         <Games/>}/>
 
-                        <Route path="/music" render={()=> 
+                        <Route path="/SocialNetwork/music" render={()=> 
                         <Music/>}/>
-                        <Route path="/findUsers" render={()=> 
+                        <Route path="/SocialNetwork/findUsers" render={()=> 
                         <FindUsersContainer/>}/>
 
-                        <Route path="/settings" render={()=> 
+                        <Route path="/SocialNetwork/settings" render={()=> 
                         <Settings/>}/>
 
-                        <Route path="/login" render={()=> 
+                        <Route path="/SocialNetwork/login" render={()=> 
                         <Login/>}/>
                     </div>
                 </div>
