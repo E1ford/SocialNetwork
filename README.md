@@ -1,5 +1,5 @@
 # Dark side
-Что бы посмотреть сайт перейдите по  [ссылке](https://e1ford.github.io/SocialNetwork/) 
+Что бы посмотреть сайт перейдите по  [ссылке](https://e1ford.github.io/SocialNetwork/#/) 
 
 Используйте эти данные для входа | Email: free@samuraijs.com | Password: free |
 
