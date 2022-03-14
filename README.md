@@ -1,7 +1,11 @@
 # Dark side
+<<<<<<< HEAD
 Что бы посмотреть сайт перейдите по  [|ссылке|](https://e1ford.github.io/SocialNetwork/) 
 
  ***!внимание работает не во всех браузерах, из за обновленной политики безопасности, и ограничений GH-pages***
+=======
+Что бы посмотреть сайт перейдите по  [ссылке](https://e1ford.github.io/SocialNetwork/#/) 
+>>>>>>> 5f078ec9fbd43668e182167bca49f97d145f83ed
 
 Используйте эти данные для входа | Email: free@samuraijs.com | Password: free |
 
