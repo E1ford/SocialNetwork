@@ -1,35 +1,35 @@
 .avatar img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
 }
 
 .wrapper {
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .avatar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .follow {
-    border-radius:15px;
-    background-color: #666969;
-    padding: 8px 20px;
-    color: #eee;
+  border-radius: 15px;
+  background-color: #666969;
+  padding: 8px 20px;
+  color: #eee;
 }
-.follow:hover{
-    cursor: pointer;
-    background-color: #1964af;
+.follow:hover {
+  cursor: pointer;
+  background-color: #1964af;
 }
 .left {
-    color: #eee;
+  color: #eee;
 }
 .right {
-    color: #eee;
+  color: #eee;
 }

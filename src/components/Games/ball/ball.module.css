@@ -1,0 +1,48 @@
+.News {
+  width: 490px;
+  margin: 100px auto;
+}
+.canva {
+  border: 1px solid #eee;
+  background: rgba(64, 69, 148, 0);
+}
+.cursor {
+  border: 1px solid #eee;
+  background: rgba(64, 69, 148, 0);
+}
+.buttonStart {
+  display: flex;
+  justify-content: space-between;
+}
+.start {
+  display: inline-block;
+  margin: 10px auto;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 80px;
+  padding: 10px 20px;
+  background: rgb(64, 70, 148);
+}
+
+.cheat {
+  display: inline-block;
+  margin: 10px auto;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 80px;
+  padding: 10px 20px;
+  background: rgb(184, 48, 105);
+}
+.stop {
+  display: inline-block;
+  font-weight: 700;
+  margin: 10px auto;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 80px;
+  padding: 10px 20px;
+  background: rgb(48, 114, 28);
+}

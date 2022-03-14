@@ -1,43 +1,43 @@
-.Header{
-    min-width: 1000px;
-    height: 60px;
-    background-color: #303033;
-  }
+.Header {
+  min-width: 1000px;
+  height: 60px;
+  background-color: #303033;
+}
 
-.container{
+.container {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.icon{
+.icon {
   padding: 4px 4px;
   max-height: 50px;
-} 
+}
 .login a {
   border-radius: 10px;
   padding: 10px;
-  background-color:#404044;
+  background-color: #404044;
   color: white;
 }
-.login a:hover{
-  background-color:#646469;
+.login a:hover {
+  background-color: #646469;
 }
-.login_logout{
-display: flex;
-flex-direction: row;
-align-items:center
+.login_logout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.buttonWelcome{
+.buttonWelcome {
   transition: 0.5s;
   margin-left: 10px;
   border-radius: 10px;
   padding: 10px;
-  background-color:#4c4c9e;
+  background-color: #4c4c9e;
   color: white;
 }
-.buttonWelcome:hover{
+.buttonWelcome:hover {
   cursor: pointer;
-  background-color:#6969ac;
+  background-color: #6969ac;
 }

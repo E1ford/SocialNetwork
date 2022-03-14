@@ -1,25 +1,25 @@
-import {applyMiddleware, combineReducers, createStore } from "redux";
+import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import profileReducer from './profileReducer';
 import mesReducer from './mesReducer';
-import findUsersReducer from "./findUsersReducer";
+import findUsersReducer from './findUsersReducer';
 import authReducer from './authReducer';
-import thunkMiddleware from 'redux-thunk'
-
-
+import thunkMiddleware from 'redux-thunk';
 
 let reducers = combineReducers({
-    profile: profileReducer,
-    messages: mesReducer,
-    auth:authReducer,
-    findUsers: findUsersReducer
-})
+  profile: profileReducer,
+  messages: mesReducer,
+  auth: authReducer,
+  findUsers: findUsersReducer,
+});
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+// для всех других браузеров
+// const store = createStore(reducers,applyMiddleware(thunkMiddleware));
 
-const store = createStore(reducers,composeEnhancers(
-    applyMiddleware(thunkMiddleware)
-  ));
-
-window.store = store; 
+// для хрома dev tool
+const store = createStore(
+  reducers,
+  compose(applyMiddleware(thunkMiddleware), window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()),
+);
+window.store = store;
 
 export default store;

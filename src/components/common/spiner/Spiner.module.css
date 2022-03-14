@@ -1,10 +1,10 @@
-.wrapper{
-    display: inline-block;
-    position: absolute;
-    left:53%;
-    top: 25%;
+.wrapper {
+  display: inline-block;
+  position: absolute;
+  left: 53%;
+  top: 25%;
 }
-.wrapper img{
-    width: 40px;
-    height: 40px;
+.wrapper img {
+  width: 40px;
+  height: 40px;
 }

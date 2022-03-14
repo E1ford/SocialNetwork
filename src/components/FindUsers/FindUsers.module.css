@@ -1,64 +1,66 @@
-
-.pagination{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.allPages{
-    color:#eee;
-    background-color: black;
-    margin:5px;
-    padding:5px 10px 5px 10px
+.allPages {
+  color: #eee;
+  background-color: black;
+  margin: 5px;
+  padding: 5px 10px 5px 10px;
 }
-.allPages:hover{
-    cursor: pointer;
+.allPages:hover {
+  cursor: pointer;
 }
-.activePages{
-    color:rgb(255, 1, 1);
-    background-color:blue;
+.activePages {
+  color: rgb(255, 1, 1);
+  background-color: blue;
 }
 
 /*  */
 /* 
  */
- /* 
+/* 
   */
 .paginator {
-    width: auto;
-    padding: 10px;
-    margin: 30px auto;
-    white-space: nowrap;
-    background: #ecf0f1;
+  width: auto;
+  padding: 10px;
+  margin: 30px auto;
+  white-space: nowrap;
+  background: #ecf0f1;
 }
 
 .paginator li,
 .paginator span {
-    display: inline-block;
-    min-width: 20px;
-    height: 40px;
-    padding: 0 10px;
-    line-height: 40px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    vertical-align: middle;
-    background: #a5a6a7;
+  display: inline-block;
+  min-width: 20px;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: #a5a6a7;
 }
 
 .paginator .current {
-    background-color: #666969;
+  background-color: #666969;
 }
 
 .paginator li:hover {
-    background-color: #909492;
+  background-color: #909492;
 }
 /* запрет выделения текста */
-.paginator .next,.paginator .prev, .zxc, .next{
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* Internet Explorer/Edge */
-    user-select: none;
+.paginator .next,
+.paginator .prev,
+.zxc,
+.next {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
